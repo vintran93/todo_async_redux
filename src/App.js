@@ -24,9 +24,8 @@ class App extends Component {
         <div className="App">
           <h2>To-do App</h2>
           <TodoForm />
-          <ul>
             {this.props.loading ? <h3>Loading...</h3>: todos}
-          </ul>
+
         </div>
       );
     }
@@ -41,3 +40,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {getTodos, deleteTodo})(App);
+
+
